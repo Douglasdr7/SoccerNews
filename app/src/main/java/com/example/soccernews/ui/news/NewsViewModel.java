@@ -28,5 +28,6 @@ public class NewsViewModel extends ViewModel {
     public LiveData<List<News>> getNews() {
 
         return this.news;
+
     }
 }
