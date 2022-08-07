@@ -10,55 +10,56 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.example.soccernews.MainActivity;
 import com.example.soccernews.databinding.FragmentNewsBinding;
 import com.example.soccernews.ui.adapter.NewsAdapter;
+import com.google.android.material.snackbar.Snackbar;
 
 public class NewsFragment extends Fragment {
 
     private FragmentNewsBinding binding;
+    private NewsViewModel newsViewModel;
 
 
-    public View onCreateView(@NonNull LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState) {
-        NewsViewModel newsViewModel = new ViewModelProvider(this).get(NewsViewModel.class);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        newsViewModel = new ViewModelProvider(this).get(NewsViewModel.class);
 
         binding = FragmentNewsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
 
+        observeNews();
+        observeStates();
 
+        binding.srlNews.setOnRefreshListener(newsViewModel::findNews);
+        return root;
+    }
+
+    private void observeNews() {
         binding.rvNews.setLayoutManager(new LinearLayoutManager(getContext()));
         newsViewModel.getNews().observe(getViewLifecycleOwner(), news -> {
-            binding.rvNews.setAdapter(new NewsAdapter(news, updatedNews->{
-                MainActivity activity= (MainActivity) getActivity();
-                if (activity != null) {
-                    activity.getDb().newsDao().save(updatedNews);
-                }
-            }));
+            binding.rvNews.setAdapter(new NewsAdapter(news, newsViewModel::saveNews));
 
         });
+    }
 
-        newsViewModel.getState().observe(getViewLifecycleOwner(), state ->{
-            switch(state){
+    private void observeStates() {
+        newsViewModel.getState().observe(getViewLifecycleOwner(), state -> {
+            switch (state) {
                 case DOING:
-                    //TODO iniciar spike refresh layout
+                    binding.srlNews.setRefreshing(true);
                     break;
 
                 case DONE:
 
-                    //TODO finalizar spike refresh layout
+                    binding.srlNews.setRefreshing(false);
                     break;
 
                 case ERROR:
 
-                    //TODO finalizar spike refresh layout
-                    //TODO mostrar um erro generico
+                    binding.srlNews.setRefreshing(false);
+                    Snackbar.make(binding.srlNews, "Network error", Snackbar.LENGTH_SHORT).show();
             }
-
         });
-
-
-        return root;
     }
 
     @Override
