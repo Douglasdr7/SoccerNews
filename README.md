@@ -7,7 +7,7 @@ Oi, sou o Douglas! Estou aqui para aprender e contribuir com meu conhecimento ne
 
 [![Linkedin Badge](https://img.shields.io/badge/-Douglas_Ramos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.https://www.linkedin.com/in/douglas-ramos-156671b8/)](https://www.linkedin.com/in/douglas-ramos-156671b8)  
 
-[![Gmail Badge](https://img.shields.io/badge/-igor.bagliotti@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:igor.bagliotti@gmail.com)](mailto:igor.bagliotti@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-douglas.dr.ramos@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:douglas.dr.ramos@gmail.com)](mailto:douglas.dr.ramos@gmail.com)
 
 
 ## <br />Tecnologias utilizadas
