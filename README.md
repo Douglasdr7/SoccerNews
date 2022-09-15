@@ -5,7 +5,7 @@ Aplicativo que trás diretamente de uma API REST as noticias que la sao atalizad
 ## Sobre o Autor
 Oi, sou o Douglas! Estou aqui para aprender e contribuir com meu conhecimento nesse aplicativo Android utilizando Java e Kotlin. 
 
-[![Linkedin Badge](https://img.shields.io/badge/-Douglas_Ramos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.https://www.linkedin.com/in/douglas-ramos-156671b8/)](https://br.https://www.linkedin.com/in/douglas-ramos-156671b8/)  
+[![Linkedin Badge](https://img.shields.io/badge/-Douglas_Ramos-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://br.https://www.linkedin.com/in/douglas-ramos-156671b8/)](https://br.https://www.linkedin.com/in/douglas-ramos-156671b8)  
 
 [![Gmail Badge](https://img.shields.io/badge/-igor.bagliotti@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:igor.bagliotti@gmail.com)](mailto:igor.bagliotti@gmail.com)
 
