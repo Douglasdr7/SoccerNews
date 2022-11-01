@@ -1,6 +1,6 @@
-# Aplicativo de Noticias do futebol! 
+# Soccer news app!
 
-Aplicativo que trás diretamente de uma API REST as noticias que la sao atalizadas. 
+Application that brings the news that are updated directly from a REST API.
 
 ## About the author
 Hi, I'm Douglas! I'm here to learn and contribute my knowledge in this Android application using Java and Kotlin.
