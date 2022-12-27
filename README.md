@@ -17,7 +17,6 @@ Hi, I'm Douglas! I'm here to learn and contribute my knowledge in this Android a
 5. ListAdapter
 6. Material Design
 
-
 ## <br />Description
 1. Preparação do ambiente e criação do nosso App
 2. Montando layout do projeto
